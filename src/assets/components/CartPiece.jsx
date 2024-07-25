@@ -11,7 +11,7 @@ export default function CartPiece({ quantity, image, name, category, price, incr
                 <picture>
                     <source srcSet={image.mobile} media='(max-width: 500px)' />
                     <source srcSet={image.tablet} media='(max-width: 800px)' />
-                    <img src={image.desktop} alt={`${name} image`} style={inCart ? { outline: '2px solid var(--red)' } : { outline: 'none' }} />
+                    <img src={image.desktop} alt={`${name} image`} style={quantity > 0 ? { outline: '2px solid var(--red)' } : { outline: 'none' }} />
                 </picture>
                 <AddToCart
                     incrementProduct={incrementProduct}
