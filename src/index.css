@@ -46,9 +46,16 @@ body {
   display: flex;
 }
 
+.topLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
 h2 {
   font-size: 2.5rem;
-  margin-bottom: 2rem;
 }
 
 h2.cartTitle {
@@ -56,6 +63,19 @@ h2.cartTitle {
   font-size: 1.5rem;
   color: var(--red);
   text-align: left;
+}
+
+select {
+  height: fit-content;
+  font-family: 'Red-Hat-Text';
+  background-color: var(--rose-100);
+  font-weight: 600;
+  color: var(--rose-700);
+  padding: .5rem 1rem;
+  outline: none;
+  border: 2px solid var(--rose-700);
+  border-right: 1rem solid transparent;
+  border-radius: 10rem;
 }
 
 .productGrid {
