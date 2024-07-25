@@ -67,10 +67,10 @@
      },
      {
         "image": {
-            "thumbnail": "../images/image-cake-thumbnail.jpg",
-            "mobile": "../images/image-cake-mobile.jpg",
-            "tablet": "../images/image-cake-tablet.jpg",
-            "desktop": "src/assets/images/image-cake-desktop.jpg"
+            "thumbnail": "https://github.com/grgrnkoo/Product-List-with-Cart/blob/main/src/assets/images/image-cake-thumbnail.jpg?raw=true",
+            "mobile": "https://github.com/grgrnkoo/Product-List-with-Cart/blob/main/src/assets/images/image-cake-mobile.jpg?raw=true",
+            "tablet": "https://github.com/grgrnkoo/Product-List-with-Cart/blob/main/src/assets/images/image-cake-tablet.jpg?raw=true",
+            "desktop": "https://github.com/grgrnkoo/Product-List-with-Cart/blob/main/src/assets/images/image-cake-desktop.jpg?raw=true"
         },
         "name": "Red Velvet Cake",
         "category": "Cake",
