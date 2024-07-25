@@ -1,0 +1,374 @@
+:root {
+  --red: hsl(14, 86%, 42%);
+  --green: hsl(159, 69%, 38%);
+  --white: hsl(0, 100%, 100%);
+
+  --rose-50: hsl(20, 50%, 98%);
+  --rose-100: hsl(13, 31%, 94%);
+  --rose-300: hsl(14, 25%, 72%);
+  --rose-400: hsl(7, 20%, 60%);
+  --rose-500: hsl(12, 20%, 44%);
+  --rose-900: hsl(14, 65%, 9%);
+}
+
+@font-face {
+  font-family: 'Red-Hat-Text-Italic';
+  src: url('./assets/fonts/RedHatText-Italic-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Red-Hat-Text';
+  src: url('./assets/fonts/RedHatText-VariableFont_wght.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Red-Hat-Text';
+  background-color: var(--rose-50);
+  padding: 3rem 0;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+h2.cartTitle {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--red);
+  text-align: left;
+}
+
+.productGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 2;
+}
+
+.cart {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  min-width: 33%;
+  background-color: var(--white);
+  margin-left: 2rem;
+  padding: 2rem;
+  height: fit-content;
+  border-radius: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  grid-gap: 1.5rem;
+}
+
+img,
+picture {
+  width: 100%;
+}
+
+.cartPiece {
+  position: relative;
+  text-align: left;
+}
+
+.cartPiece .category {
+  color: var(--rose-400);
+  font-size: .8rem;
+}
+
+.cartPiece h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: .2rem 0;
+}
+
+.cartPiece .price {
+  color: var(--red);
+  font-weight: 600;
+}
+
+picture>img,
+picture>source {
+  border-radius: 15px;
+}
+
+.imageBox {
+  display: flex;
+  height: fit-content;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.addToCart {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 25%);
+  background-color: var(--white);
+  width: fit-content;
+  min-width: 50%;
+  text-wrap: nowrap;
+  padding: .7rem 2rem;
+  border-radius: 20rem;
+  z-index: 2;
+  border: 1px solid var(--red);
+  font-size: .9rem;
+}
+
+.addToCart img,
+.ecoFriendly img {
+  max-width: 30px;
+  margin-right: .5rem;
+}
+
+.addToCart span {
+  font-weight: 600;
+}
+
+.addToCart:hover {
+  cursor: pointer;
+  color: var(--red);
+}
+
+.addToCart.active {
+  min-width: calc(50% + 2rem);
+  padding: .7rem;
+  display: flex;
+  background-color: var(--red);
+  justify-content: space-between;
+}
+
+.addToCart.active:hover {
+  cursor: default;
+}
+
+.addToCart.active img {
+  width: 15px;
+  height: 15px;
+  padding: 2px;
+  margin-right: 0;
+  border: 1px solid var(--white);
+  border-radius: 200px;
+}
+
+.addToCart .hoverDiv {
+  width: 15px;
+  height: 15px;
+  border-radius: 200px;
+}
+
+.addToCart .hoverDiv:hover {
+  background-color: var(--white);
+}
+
+.addToCart.active img:hover {
+  filter: invert(30%) sepia(71%) saturate(1552%) hue-rotate(291deg) brightness(81%) contrast(100%);
+  border: none;
+}
+
+.emptyCart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: var(--rose-500);
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+.emptyCart img {
+  width: 40%;
+  margin-bottom: 1rem;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.productInCart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  border-bottom: 1px solid var(--rose-100);
+  font-size: .9rem;
+  margin-top: .5rem;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+
+.productInCart .name,
+.productInCart .quantity,
+.productInCart .pricePerAll,
+.bold,
+.confirm {
+  font-weight: 600;
+}
+
+.productInCart .quantity {
+  color: var(--red);
+  margin-right: 1.5rem;
+}
+
+.productInCart .pricePerOne {
+  color: var(--rose-400);
+  margin-right: .5rem;
+}
+
+.productInCart .pricePerAll {
+  color: var(--rose-500);
+}
+
+.productInCart img {
+  width: 20px;
+  border: 2px solid var(--rose-400);
+  padding: 2px;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+.productInCart img:hover {
+  filter: invert(7%) sepia(46%) saturate(1543%) hue-rotate(339deg) brightness(35%) contrast(98%);
+  cursor: pointer;
+}
+
+.productInCart .priceInfo {
+  text-align: left;
+  margin: 1rem 0;
+}
+
+.orderTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.ecoFriendly {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: var(--rose-50);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: .9rem;
+}
+
+.confirm {
+  background-color: var(--red);
+  padding: 1rem;
+  border-radius: 20rem;
+  color: var(--white);
+  border: none;
+  outline: none;
+  letter-spacing: 1.1px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.confirm:hover {
+  cursor: pointer;
+  background-color: hsl(14, 86%, 32%);
+}
+
+.totalSum {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1000px) {
+  .addToCart {
+    font-size: .8rem;
+    padding: .7rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ecoFriendly {
+    flex-direction: column;
+  }
+
+  .ecoFriendly img {
+    margin-bottom: 1rem;
+  }
+
+  .totalSum {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #root {
+    flex-direction: column;
+  }
+
+  .cart {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .ecoFriendly {
+    flex-direction: row;
+  }
+
+  .ecoFriendly img {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .addToCart {
+    font-size: .9rem;
+    padding: .5rem 1.5rem;
+  }
+
+  .addToCart.active {
+    min-width: 50%;
+  }
+
+  .confirm {
+    font-size: .8rem;
+  }
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
