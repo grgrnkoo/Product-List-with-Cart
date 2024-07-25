@@ -70,7 +70,7 @@
             "thumbnail": "../images/image-cake-thumbnail.jpg",
             "mobile": "../images/image-cake-mobile.jpg",
             "tablet": "../images/image-cake-tablet.jpg",
-            "desktop": "../images/image-cake-desktop.jpg"
+            "desktop": "src/assets/images/image-cake-desktop.jpg"
         },
         "name": "Red Velvet Cake",
         "category": "Cake",
