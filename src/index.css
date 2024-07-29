@@ -393,16 +393,3 @@ picture>source {
 .overflow-y-hidden {
   overflow-y: hidden;
 }
-
-.topLine {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.topLine h2 {
-  margin-bottom: 1rem;
-}
-
-.topLine select {
-  padding: 1rem;
-}
